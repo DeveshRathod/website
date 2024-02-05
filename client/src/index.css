@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 .bg-customColor {
-  background-color: #5fd1d4;
+  background-color: #7ebd01;
 }
 
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #5fd1d4;
+  color: #7ebd01;
 }
 
 .nav-link::before {
@@ -19,7 +19,7 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background-color: #5fd1d4;
+  background-color: #7ebd01;
   transition: width 0.3s ease, left 0.3s ease;
   transform-origin: 50% 50%;
 }

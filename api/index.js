@@ -26,7 +26,7 @@ const messageSchema = new mongoose.Schema({
   },
 });
 
-const Message = mongoose.model("Message", messageSchema);
+const Message = mongoose.model("data", messageSchema);
 
 app.use(express.json());
 
