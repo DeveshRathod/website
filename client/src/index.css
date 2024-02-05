@@ -6,11 +6,10 @@
   background-color: #5fd1d4;
 }
 
-/* Add this CSS to your styles */
 .nav-link {
   position: relative;
   text-decoration: none;
-  color: #5fd1d4; /* Change this to your desired text color */
+  color: #5fd1d4;
 }
 
 .nav-link::before {
@@ -19,8 +18,8 @@
   bottom: 0;
   left: 50%;
   width: 0;
-  height: 2px; /* Change this to your desired underline thickness */
-  background-color: #5fd1d4; /* Change this to your desired underline color */
+  height: 2px;
+  background-color: #5fd1d4;
   transition: width 0.3s ease, left 0.3s ease;
   transform-origin: 50% 50%;
 }
