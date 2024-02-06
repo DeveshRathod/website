@@ -4,8 +4,13 @@ import Typography from "@mui/material/Typography";
 
 const SkillsProgressBar = ({ skill, progress }) => {
   return (
-    <div style={{ width: "100%", marginBottom: "20px" }}>
-      <Typography variant="subtitle1">{skill}</Typography>
+    <div
+      style={{ width: "100%", marginBottom: "20px" }}
+      className=" font-customFont"
+    >
+      <Typography variant="subtitle1" sx={{ fontSize: ["15px", "18px"] }}>
+        {skill}
+      </Typography>
       <LinearProgress
         variant="buffer"
         value={progress}

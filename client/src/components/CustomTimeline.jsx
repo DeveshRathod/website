@@ -27,7 +27,7 @@ const getIconForCourse = (courseType) => {
 
 const CustomTimeline = () => {
   return (
-    <Timeline position="alternate" className=" pt-10">
+    <Timeline position="alternate" className=" font-customFont pt-10">
       {data.map((course, index) => (
         <TimelineItem key={index}>
           <TimelineOppositeContent
@@ -46,11 +46,19 @@ const CustomTimeline = () => {
             <TimelineConnector sx={{ background: "#7ebd01" }} />
           </TimelineSeparator>
           <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <Typography variant="h6" component="span">
+            <Typography
+              variant="h6"
+              sx={{ fontSize: ["15px", "18px"] }}
+              component="span"
+            >
               {course.name} {course.institute_name}
             </Typography>
-            <Typography>{course.Branch}</Typography>
-            <Typography>{course.SGPA}</Typography>
+            <Typography sx={{ fontSize: ["10px", "15px"] }}>
+              {course.Branch}
+            </Typography>
+            <Typography sx={{ fontSize: ["10px", "15px"] }}>
+              {course.SGPA}
+            </Typography>
           </TimelineContent>
         </TimelineItem>
       ))}
