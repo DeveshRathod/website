@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/projects" element={<Pages.Projects />} />
         <Route path="/*" element={<Pages.NotFound />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

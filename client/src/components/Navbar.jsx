@@ -6,13 +6,13 @@ import ClearIcon from "@mui/icons-material/Clear";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="m-auto p-8" onClick={() => setToggle(!toggle)}>
+    <nav className="m-auto p-10" onClick={() => setToggle(!toggle)}>
       <div className="flex felx-col items-center justify-between">
         <div>
-          <h2>LOGO</h2>
+          <h2 className=" font-customFont">LOGO</h2>
         </div>
         <div className="hidden sm:block">
-          <div className="flex justify-between gap-8 ">
+          <div className="flex justify-between gap-8 font-customFont">
             <NavLink
               exact="true"
               to="/"
@@ -21,16 +21,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink to="/about" className="nav-link" activeclassname="active">
-              About
-            </NavLink>
-            <NavLink
-              to="/projects"
-              className="nav-link"
-              activeclassname="active"
-            >
-              Projects
-            </NavLink>
+
             <NavLink
               to="/achievements"
               className="nav-link"
@@ -63,7 +54,7 @@ const Navbar = () => {
             <ClearIcon />
           </button>
 
-          <div className="flex justify-between gap-8 flex-col">
+          <div className="flex justify-between gap-8 flex-col font-customFont font-semibold">
             <NavLink exact="true" to="/" activeclassname="active">
               Home
             </NavLink>

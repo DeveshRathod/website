@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,10 +7,21 @@
   background-color: #7ebd01;
 }
 
+.text-customColor {
+  color: #7ebd01;
+}
+
+.font-customFont {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
 .nav-link {
   position: relative;
   text-decoration: none;
   color: #7ebd01;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .nav-link::before {
@@ -32,4 +44,24 @@
 .active::before {
   width: 100%;
   left: 0;
+}
+
+.border-custom-200 {
+  --tw-border-opacity: 1;
+  border-color: #7ebd01;
+}
+
+.bg-indigo-50 {
+  --tw-bg-opacity: 1;
+  background-color: white;
+}
+
+.focus\:ring-custom-900:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: #7ebd01;
+}
+
+.hover\:bg-custom-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: #7ebd01;
 }
