@@ -4,7 +4,7 @@ import { FiArrowDownCircle } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <div className="flex flex-col m-8 mt-8 sm:mt-24 sm:flex-row">
+    <div className="flex flex-col m-8 mt-8 sm:mt-24 font-customFont sm:flex-row">
       <div className="w-full sm:w-2/3 text-right mt-8 sm:mt-0">
         <img src={img} alt="Hero_image" className="w-auto m-auto" />
       </div>

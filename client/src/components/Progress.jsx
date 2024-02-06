@@ -8,7 +8,10 @@ const SkillsProgressBar = ({ skill, progress }) => {
       style={{ width: "100%", marginBottom: "20px" }}
       className=" font-customFont"
     >
-      <Typography variant="subtitle1" sx={{ fontSize: ["15px", "18px"] }}>
+      <Typography
+        variant="subtitle1"
+        sx={{ fontSize: ["15px", "18px"], fontFamily: '"Poppins", sans-serif' }}
+      >
         {skill}
       </Typography>
       <LinearProgress

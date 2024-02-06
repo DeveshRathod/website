@@ -4,7 +4,10 @@ import Progress from "../components/Progress";
 
 const About = () => {
   return (
-    <div className="flex flex-col mt-8 sm:mt-36  sm:m-8" id="about">
+    <div
+      className="flex flex-col mt-8 sm:mt-36  sm:m-8 font-customFont"
+      id="about"
+    >
       <div className="self-center">
         <h1 className="text-3xl sm:text-6xl">About</h1>
       </div>
