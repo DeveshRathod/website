@@ -7,9 +7,13 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const scrollToSection = (sectionId) => {
+    console.log("Scrolling to section with ID:", sectionId);
     const section = document.getElementById(sectionId);
     if (section) {
+      console.log("Section found:", section);
       section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("Section not found with ID:", sectionId);
     }
   };
 

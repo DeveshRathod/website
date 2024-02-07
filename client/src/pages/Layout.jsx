@@ -3,9 +3,9 @@ import Home from "./Home";
 import About from "./About";
 import Projects from "./Projects";
 
-const Hero = () => {
+const Layout = () => {
   return (
-    <div id="home">
+    <div>
       <Home />
       <About />
       <Projects />
@@ -13,4 +13,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Layout;

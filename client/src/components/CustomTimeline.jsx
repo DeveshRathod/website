@@ -7,7 +7,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-import data from "../utils/data/courses.json";
+import data from "../utils/data/courses.js";
 import EngineeringIcon from "@mui/icons-material/Engineering";
 import SchoolIcon from "@mui/icons-material/School";
 import BackpackIcon from "@mui/icons-material/Backpack";
@@ -66,7 +66,7 @@ const CustomTimeline = () => {
             </Typography>
             <Typography
               sx={{
-                fontSize: ["12px", "18px"],
+                fontSize: ["10px", "14px"],
                 fontFamily: '"Poppins", sans-serif',
               }}
             >
