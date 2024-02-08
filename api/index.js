@@ -30,8 +30,23 @@ const Message = mongoose.model("message", messageSchema);
 app.post("/messages", async (req, res) => {
   try {
     const { email, subject, message } = req.body;
+    if (!email) {
+      return res.status(400).json({
+        message: "Please enter your email",
+      });
+    }
+    if (!subject) {
+      return res.status(400).json({
+        message: "Please enter your subject",
+      });
+    }
+    if (!message) {
+      return res.status(400).json({
+        message: "Please enter your message",
+      });
+    }
     const found = await Message.find({ email });
-    if (found) {
+    if (found.length > 0) {
       return res.status(600).json({
         message: "Please wait for me to respond to your previous message",
       });
@@ -39,11 +54,11 @@ app.post("/messages", async (req, res) => {
     const newMessage = new Message({ email, subject, message });
     const savedMessage = await newMessage.save();
     res.status(200).json({
-      message: "Message Sent Successfully.I will get back to you soon",
+      message: "Message Sent Successfully. I will get back to you soon",
     });
   } catch (error) {
     res.status(500).json({
-      message: "Error.Please Try contacting with social Media",
+      message: "Error. Please try contacting via social media.",
     });
   }
 });
