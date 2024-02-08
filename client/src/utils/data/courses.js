@@ -2,7 +2,7 @@ const data = [
   {
     name: "BE",
     institute_name: "AISSMS IOIT",
-    Branch: "E&TC",
+    Branch: "Electronics and Telecommunication",
     SGPA: "8.32",
     year: "2024",
   },
@@ -16,7 +16,6 @@ const data = [
   {
     name: "SSC",
     institute_name: "SSNMA School",
-    Branch: "General",
     SGPA: "91%",
     year: "2018",
   },

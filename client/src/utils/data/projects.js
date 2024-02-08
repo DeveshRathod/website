@@ -1,4 +1,6 @@
 import img from "../images/img1.png";
+import yt from "../images/yt.png";
+import clg from "../images/clg.png";
 
 const data = [
   {
@@ -14,29 +16,29 @@ const data = [
   },
   {
     id: 2,
-    title: "StayFit",
+    title: "Video Sharing",
     description: "Fitness Appication",
     about: "This is Good Application",
     tech_stack: ["React", "REST API"],
     repo_url: "https://github.com/DeveshRathod/StayFit",
     demo_url: "https://stay-fit-nu.vercel.app/",
-    image: img,
+    image: yt,
     category: "Front End",
   },
   {
     id: 3,
-    title: "StayFit",
+    title: "College Web",
     description: "Fitness Appication",
     about: "This is Good Application",
     tech_stack: ["React", "REST API"],
     repo_url: "https://github.com/DeveshRathod/StayFit",
     demo_url: "https://stay-fit-nu.vercel.app/",
-    image: img,
+    image: clg,
     category: "Front End",
   },
   {
     id: 4,
-    title: "StayFit",
+    title: "Stayfit",
     description: "Fitness Appication",
     about: "This is Good Application",
     tech_stack: ["React", "REST API"],

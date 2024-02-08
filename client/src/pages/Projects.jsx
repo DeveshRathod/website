@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "../utils/data/projects.js";
 import ProjectCard from "../components/ProjectCard.jsx";
 
@@ -7,9 +7,18 @@ const Projects = () => {
   const [projects, setProjects] = useState(initialProjects);
   const [showAll, setShowAll] = useState(false);
 
+  useEffect(() => {
+    const visibleCards = document.querySelectorAll(".card-container");
+    visibleCards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("visible");
+      }, 50 * index);
+    });
+  }, [projects]);
+
   const toggleProjects = () => {
     if (showAll) {
-      setProjects(data.slice(0, 3));
+      setProjects(initialProjects);
     } else {
       const remainingProjects = data.slice(projects.length);
       const nextProjects = remainingProjects.slice(0, 6);
@@ -24,7 +33,7 @@ const Projects = () => {
 
   return (
     <div
-      className="flex flex-col items-center mt-8 sm:mt-36 sm:m-8 font-customFont relative"
+      className="flex flex-col items-center mt-4 sm:mt-24 sm:m-8 font-customFont relative"
       id="projects"
     >
       <div className="self-center">
@@ -34,7 +43,9 @@ const Projects = () => {
       <div className="m-10 transition-all duration-500 ease-in-out">
         <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-7 md:justify-self-auto">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <div key={index} className="card-container">
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>

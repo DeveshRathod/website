@@ -27,7 +27,7 @@ const getIconForCourse = (courseType) => {
 
 const CustomTimeline = () => {
   return (
-    <Timeline position="alternate" className=" pt-10">
+    <Timeline position="alternate" className="pt-10">
       {data.map((course, index) => (
         <TimelineItem key={index}>
           <TimelineOppositeContent
@@ -60,6 +60,7 @@ const CustomTimeline = () => {
               sx={{
                 fontSize: ["12px", "18px"],
                 fontFamily: '"Poppins", sans-serif',
+                color: "#7ebd01",
               }}
             >
               {course.Branch}

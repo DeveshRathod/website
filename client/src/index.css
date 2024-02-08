@@ -51,11 +51,6 @@
   border-color: #7ebd01;
 }
 
-.bg-indigo-50 {
-  --tw-bg-opacity: 1;
-  background-color: white;
-}
-
 .focus\:ring-custom-900:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: #7ebd01;
@@ -70,22 +65,31 @@
   transition: all 0.5s ease-in-out;
 }
 
-.card-container {
-  display: inline-block;
+.cardHover {
+  transition: all ease-in-out 0.2ms ease;
 }
 
-.card-container:hover .front {
-  transform: rotateY(-180deg);
+.cardHover:hover {
+  transform: scale(1.005);
+  transition: all ease-in-out 0.2ms ease;
 }
 
-.card-container .front,
-.card-container .back {
-  position: absolute;
+.input {
+  border: none;
+  border-bottom: 2px solid #7ebd01;
+  outline: none;
+  padding: 10px;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
 }
 
-.card-container .back {
-  transform: rotateY(180deg);
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  color: #7ebd01;
+  font-weight: 400;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
 }

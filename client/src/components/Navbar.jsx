@@ -6,17 +6,6 @@ import ClearIcon from "@mui/icons-material/Clear";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-  const scrollToSection = (sectionId) => {
-    console.log("Scrolling to section with ID:", sectionId);
-    const section = document.getElementById(sectionId);
-    if (section) {
-      console.log("Section found:", section);
-      section.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.log("Section not found with ID:", sectionId);
-    }
-  };
-
   return (
     <nav
       className="m-auto p-10 sticky top-0 z-50 bg-white shadow"
@@ -28,29 +17,10 @@ const Navbar = () => {
         </div>
         <div className="hidden sm:block">
           <div className="flex justify-between gap-8 font-customFont">
-            <NavLink
-              exact="true"
-              to="/"
-              className="nav-link"
-              activeclassname="active"
-              onClick={() => scrollToSection("home")}
-            >
+            <NavLink to="/" className="nav-link" activeclassname="active">
               Home
             </NavLink>
-            <a
-              href="#"
-              className="nav-link"
-              onClick={() => scrollToSection("about")}
-            >
-              About
-            </a>
-            <a
-              href="#"
-              className="nav-link"
-              onClick={() => scrollToSection("projects")}
-            >
-              Projects
-            </a>
+
             <NavLink
               to="/achievements"
               className="nav-link"
@@ -86,23 +56,10 @@ const Navbar = () => {
           {/* sidenav */}
           <div className="scroll-container">
             <div className="flex justify-between gap-8 flex-col font-customFont font-semibold z-auto ">
-              <NavLink exact="true" to="/" activeclassname="active">
+              <NavLink to="/" activeclassname="active">
                 Home
               </NavLink>
-              <a
-                href="#"
-                onClick={() => scrollToSection("about")}
-                activeclassname="active"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                onClick={() => scrollToSection("projects")}
-                activeclassname="active"
-              >
-                Projects
-              </a>
+
               <NavLink to="/achievements" activeclassname="active">
                 Achievements
               </NavLink>
